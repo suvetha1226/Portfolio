@@ -60,8 +60,8 @@
         <div class="col-md-6 intros text-start">
           <h1 class="display-2">
             <span class="display-2--intro">Hey!, I'm Suvetha Balu</span>
-            <span class="display-2--description lh-base">
-              <span id="typewriter">I'm &nbsp;<span id="highlight"></span></span>
+              <span class="display-2--description lh-base">
+              I'm Compositing Artist
             </span>
           </h1>
 
@@ -629,45 +629,45 @@
     });
 
 
-const text = "Compositing Artist";  // Only the part you want to highlight
-const highlightElement = document.getElementById('highlight');
-let index = 0;
-let deleting = false;
+// const text = "Compositing Artist";  // Only the part you want to highlight
+// const highlightElement = document.getElementById('highlight');
+// let index = 0;
+// let deleting = false;
 
-function typewriterLoop() {
-  if (!deleting) {
-    if (index < text.length) {
-      highlightElement.textContent += text.charAt(index);
-      index++;
-      setTimeout(typewriterLoop, 100);
-    } else {
-      setTimeout(() => {
-        deleting = true;
-        typewriterLoop();
-      }, 2000);
-    }
-  } else {
-    if (index > 0) {
-      highlightElement.textContent = text.substring(0, index - 1);
-      index--;
-      setTimeout(typewriterLoop, 50);
-    } else {
-      deleting = false;
-      setTimeout(typewriterLoop, 1000);
-    }
-  }
-}
+// function typewriterLoop() {
+//   if (!deleting) {
+//     if (index < text.length) {
+//       highlightElement.textContent += text.charAt(index);
+//       index++;
+//       setTimeout(typewriterLoop, 100);
+//     } else {
+//       setTimeout(() => {
+//         deleting = true;
+//         typewriterLoop();
+//       }, 2000);
+//     }
+//   } else {
+//     if (index > 0) {
+//       highlightElement.textContent = text.substring(0, index - 1);
+//       index--;
+//       setTimeout(typewriterLoop, 50);
+//     } else {
+//       deleting = false;
+//       setTimeout(typewriterLoop, 1000);
+//     }
+//   }
+// }
 
-document.addEventListener('DOMContentLoaded', () => {
-  highlightElement.textContent = '';
-  typewriterLoop();
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//   highlightElement.textContent = '';
+//   typewriterLoop();
+// });
 
 
-    document.addEventListener('DOMContentLoaded', () => {
-      typewriterElement.textContent = '';
-      typewriterLoop();
-    });
+    // document.addEventListener('DOMContentLoaded', () => {
+    //   typewriterElement.textContent = '';
+    //   typewriterLoop();
+    // });
 
 
 
@@ -756,5 +756,6 @@ document.addEventListener('DOMContentLoaded', () => {
   </script>
 
 </body>
+
 
 </html>
