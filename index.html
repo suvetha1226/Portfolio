@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suvetha Portfolio - VFX Compositor</title>
+  <link rel="stylesheet" href="../Portfolio/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-… (optional) …" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- ============================================
+       NAVBAR SECTION
+  ============================================ -->
+  <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="">
+        <span class="display-2--intro">Suvetha</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#campanies">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Education">Education</a></li>
+          <!-- <li class="nav-item"><a class="nav-link" href="#Showrell">Showreel</a></li> -->
+          <li class="nav-item"><a class="nav-link" href="#Experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <button type="button" class="rounded-pill btn-rounded">
+          +91-6380294732
+          <span><i class="fas fa-phone-alt"></i></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       INTRO SECTION
+  ============================================ -->
+  <section id="home" class="intro-section">
+    <div class="container">
+      <div class="row align-items-center text-white">
+        <!-- LEFT SIDE - TEXT CONTENT -->
+        <div class="col-md-6 intros text-start">
+          <h1 class="display-2">
+            <span class="display-2--intro">Hey!, I'm Suvetha Balu</span>
+            <span class="display-2--description lh-base">
+              <span id="typewriter">I'm &nbsp;<span id="highlight"></span></span>
+            </span>
+          </h1>
+
+
+          <button type="button" class="rounded-pill btn-rounded" onclick="location.href='#contact'">
+            Get in Touch
+            <span><i class="fas fa-arrow-right"></i></span>
+          </button>
+        </div>
+
+        <!-- RIGHT SIDE - IMAGE & VIDEO -->
+        <div class="col-md-6 intros text-end">
+          <div class="video-box">
+            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&h=600&fit=crop"
+              alt="video illustration" class="img-fluid">
+            <a href="https://www.youtube.com/watch?v=J9lS14nM1xg"
+              class="glightbox position-absolute top-50 start-50 translate-middle">
+              <span>
+                <i class="fas fa-play-circle"></i>
+              </span>
+              <span class="border-animation border-animation--border-1"></span>
+              <span class="border-animation border-animation--border-2"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SVG Wave -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#ffffff" fill-opacity="1"
+        d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,133.3C672,139,768,213,864,202.7C960,192,1056,96,1152,74.7C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
+    </svg>
+  </section>
+
+  <!-- ============================================
+       ABOUT ME SECTION
+  ============================================ -->
+  <section id="campanies" class="campanies">
+    <div class="container">
+      <div class="row text-center">
+        <h4 class="display-3 fw-bold">About Me</h4>
+        <div class="heading-line mb-5"></div>
+      </div>
+    </div>
+
+    <!-- ABOUT CONTENT -->
+    <div class="container py-5">
+      <div class="row align-items-center">
+
+        <!-- LEFT - PROFILE IMAGE -->
+        <div class="col-md-4 text-center profile-container scroll-reveal">
+          <div class="profile-wrapper">
+            <img src="assests/suvetha-1.png" alt="Suvetha Balu" class="img-fluid profile-img"
+              style="max-width: 280px;" />
+          </div>
+        </div>
+
+        <!-- RIGHT - ABOUT CONTENT -->
+        <div class="col-md-8 scroll-reveal">
+          <div class="content-box">
+            <p class="about-text">
+              I'm <strong>Suvetha Balu</strong>, a passionate <strong>VFX Compositor</strong> with
+              <strong>2+ years</strong> of experience in creating seamless, cinematic-quality visuals.
+              I specialize in <strong>Nuke, Mocha, Silhouette,</strong> and <strong>Photoshop</strong>, bringing life
+              and detail into every frame.
+              <br /><br />
+              I've worked with top studios such as <strong>BigBang Image Works</strong> and
+              <strong>Knack Studios</strong>, contributing to <strong>10+ major film projects</strong>. With strong
+              tracking, compositing, and creative problem-solving skills, I focus on delivering
+              clean, realistic visuals under tight deadlines.
+            </p>
+
+            <ul class="about-list">
+              <li>
+                <span class="label">Name</span>
+                Suvetha Balu
+              </li>
+              <li>
+                <span class="label">Role</span>
+                VFX Compositor
+              </li>
+              <li>
+                <span class="label">Experience</span>
+                2+ Years
+              </li>
+              <li>
+                <span class="label">Location</span>
+                Tamil Nadu, India
+              </li>
+            </ul>
+
+            <a href="Document/Suvethabalu-Resume.pdf" download class="btn-download">
+              Download Resume
+              <i class="fas fa-download"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SKILLS SECTION
+  ============================================ -->
+  <section id="Skills" class="skills-section">
+    <div class="container">
+      <div class="row text-center">
+        <h1 class="display-3 fw-bold">Technical Skills</h1>
+        <div class="heading-line"></div>
+        <p class="lead mb-5">Expert in industry-leading VFX software and tools</p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Skill 1 - Nuke -->
+        <div class="col-lg-3 col-md-6 scroll-reveal">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="assests/nuke.png" alt="Nuke Logo" style="width: 90px; height: 90px; border-radius: 50%;">
+            </div>
+            <h4>Nuke</h4>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="95"></div>
+            </div>
+            <p class="skill-percent">95%</p>
+          </div>
+        </div>
+
+        <!-- Skill 2 - Photoshop -->
+        <div class="col-lg-3 col-md-6 scroll-reveal">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="assests/photoshop.png" alt="Photoshop Logo"
+                style="width: 90px; height: 90px; border-radius: 50%;">
+            </div>
+            <h4>Photoshop</h4>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="90"></div>
+            </div>
+            <p class="skill-percent">90%</p>
+          </div>
+        </div>
+
+        <!-- Skill 3 - Mocha -->
+        <div class="col-lg-3 col-md-6 scroll-reveal">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="assests/mocha.png" alt="Mocha Logo" style="width: 90px; height: 90px; border-radius: 50%;">
+            </div>
+            <h4>Mocha</h4>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="95"></div>
+            </div>
+            <p class="skill-percent">95%</p>
+          </div>
+        </div>
+
+        <!-- Skill 4 - Silhouette -->
+        <div class="col-lg-3 col-md-6 scroll-reveal">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="assests/Silhouette.png" alt="Silhouette Logo"
+                style="width: 90px; height: 90px; border-radius: 50%;">
+            </div>
+            <h4>Silhouette</h4>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="75"></div>
+            </div>
+            <p class="skill-percent">75%</p>
+          </div>
+        </div>
+
+        <!-- Skill 5 - Compositing -->
+        <div class="col-lg-3 col-md-6 scroll-reveal">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="assests/compositing1.jpg" alt="Compositing Logo"
+                style="width: 90px; height: 90px; border-radius: 50%;">
+            </div>
+            <h4>Compositing</h4>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="95"></div>
+            </div>
+            <p class="skill-percent">95%</p>
+          </div>
+        </div>
+
+        <!-- Skill 6 - Tracking -->
+        <div class="col-lg-3 col-md-6 scroll-reveal">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="assests/2d tracking.jpg" alt="Tracking Logo"
+                style="width: 90px; height: 90px; border-radius: 50%;">
+            </div>
+            <h4>2D / 3D Tracking</h4>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="99"></div>
+            </div>
+            <p class="skill-percent">99%</p>
+          </div>
+        </div>
+
+        <!-- Skill 7 - Camera Solve -->
+        <div class="col-lg-3 col-md-6 scroll-reveal">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="assests/camera.png" alt="Camera Solving Logo"
+                style="width: 90px; height: 90px; border-radius: 50%;">
+            </div>
+            <h4>Camera Solving</h4>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="98"></div>
+            </div>
+            <p class="skill-percent">98%</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       EDUCATION SECTION
+  ============================================ -->
+  <section id="Education" class="education-section">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#fff" fill-opacity="1"
+        d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+      </path>
+    </svg>
+
+    <div class="container">
+      <div class="row text-center text-white">
+        <h1 class="display-3 fw-bold">Education</h1>
+        <div class="heading-line mx-auto" style="width: 100px; height: 4px; background: white; margin-bottom: 3rem;">
+        </div>
+        <p class="lead mb-5">My academic background and qualifications</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <!-- Education Card 1 -->
+        <div class="col-lg-5 col-md-6 mb-4 scroll-reveal">
+          <div class="education-card">
+            <div class="education-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="education-content">
+              <h3>Advance Diploma in VFX</h3>
+              <h5>Aim Media Institute, Chennai</h5>
+              <p class="education-date"><i class="far fa-calendar-alt"></i> May 2022 - Dec 2022</p>
+              <p class="education-desc">Comprehensive training in VFX compositing, tracking, and industry-standard
+                workflows using Nuke, Mocha, and other professional tools.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education Card 2 -->
+        <div class="col-lg-5 col-md-6 mb-4 scroll-reveal">
+          <div class="education-card">
+            <div class="education-icon">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <div class="education-content">
+              <h3>B.A. Tamil, Literature</h3>
+              <h5>Seethalakhshmi Ramaswami College</h5>
+              <p class="education-date"><i class="far fa-calendar-alt"></i> 2019 - 2022</p>
+              <p class="education-desc">Bachelor's degree in Tamil Literature, developing strong communication and
+                creative thinking skills.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#fff" fill-opacity="1"
+        d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
+    </svg>
+  </section>
+
+  <!-- ============================================
+       EXPERIENCE SECTION
+  ============================================ -->
+  <section id="Experience" class="experience-section">
+    <div class="container">
+      <div class="row text-center">
+        <h1 class="display-3 fw-bold">Experience</h1>
+        <div class="heading-line"></div>
+        <p class="lead mb-5">2+ years of professional VFX compositing experience</p>
+      </div>
+
+      <!-- Timeline -->
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="timeline">
+
+            <!-- Experience Item 1 -->
+            <div class="timeline-item scroll-reveal">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="timeline-date">Aug 2024 - Present</div>
+                <h3>VFX Compositor</h3>
+                <h5>Knack Studios, Chennai</h5>
+                <p>Currently working on high-end VFX projects, delivering exceptional compositing work for feature films
+                  and commercials.</p>
+              </div>
+            </div>
+
+            <!-- Experience Item 2 -->
+            <div class="timeline-item scroll-reveal">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="timeline-date">Nov 2023 - Aug 2024</div>
+                <h3>VFX Compositor</h3>
+                <h5>BIGBANG IMAGE WORKS</h5>
+                <p>
+                  Executed seamless compositing, cleanup, and roto tasks using Nuke for high-end shots.
+                  Collaborated with tracking, paint, and CG teams to create final production-ready visuals.
+                </p>
+              </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="experience-stats scroll-reveal">
+              <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                  <div class="stat-card">
+                    <div class="stat-icon">
+                      <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h2 class="stat-number" data-target="2">0</h2>
+                    <p>Years Experience</p>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="stat-card">
+                    <div class="stat-icon">
+                      <i class="fas fa-film"></i>
+                    </div>
+                    <h2 class="stat-number" data-target="10">0</h2>
+                    <p>Projects Completed</p>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="stat-card">
+                    <div class="stat-icon">
+                      <i class="fas fa-award"></i>
+                    </div>
+                    <h2 class="stat-number" data-target="100">0</h2>
+                    <p>Satisfaction Rate</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects List -->
+      <div class="row mt-5">
+        <div class="col-12 text-center mb-4">
+          <h3 class="fw-bold">Recently Worked Projects</h3>
+        </div>
+        <div class="col-lg-10 mx-auto">
+          <div class="projects-grid">
+            <div class="project-tag scroll-reveal">PUSHPA 2</div>
+            <div class="project-tag scroll-reveal">GAME CHANGER</div>
+            <div class="project-tag scroll-reveal">GANGER</div>
+            <div class="project-tag scroll-reveal">WAR 2</div>
+            <div class="project-tag scroll-reveal">MAMMAN</div>
+            <div class="project-tag scroll-reveal">THUG LIFE</div>
+            <div class="project-tag scroll-reveal">COOLIE</div>
+            <div class="project-tag scroll-reveal">THALAIVAN THALAIVI</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SHOWREEL SECTION
+  ============================================ -->
+  <!-- <section id="Showrell" class="showreel-section">
+    <div class="container">
+      <div class="row text-center">
+        <h1 class="display-3 fw-bold text-white">Showreel</h1>
+        <div class="heading-line mx-auto" style="background: white;"></div>
+        <p class="lead text-white mb-5">Watch my latest VFX compositing work</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 mx-auto scroll-reveal">
+          <div class="showreel-box">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/J9lS14nM1xg" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ============================================
+       CONTACT SECTION
+  ============================================ -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="row text-center">
+        <h1 class="display-3 fw-bold">Get In Touch</h1>
+        <div class="heading-line"></div>
+        <p class="lead mb-5">Let's work together on your next VFX project</p>
+      </div>
+
+      <div class="row">
+        <!-- Contact Info Cards -->
+        <div class="col-lg-4 col-md-6 mb-4 scroll-reveal">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h4>Email</h4>
+            <a href="mailto:suvethabalu.vfx@gmail.com">suvethabalu.vfx@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 scroll-reveal">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <h4>Phone</h4>
+            <a href="tel:+916380294732">+91 6380294732</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 scroll-reveal">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h4>Location</h4>
+            <p>74, Cyloncolony, Thathiengarpet,<br>Trichy District,<br>Tamil Nadu-621 214</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="row mt-5">
+        <div class="col-lg-8 mx-auto scroll-reveal">
+          <div class="contact-form-wrapper">
+            <form class="contact-form">
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <input type="text" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <input type="email" class="form-control" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="mb-4">
+                <input type="text" class="form-control" placeholder="Subject" required>
+              </div>
+              <div class="mb-4">
+                <textarea class="form-control" rows="6" placeholder="Your Message" required></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn-download">
+                  Send Message
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER SECTION
+  ============================================ -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row text-center text-white">
+        <div class="col-12 mb-4">
+          <h2 class="footer-brand">Suvetha Balu</h2>
+          <p class="lead">VFX Compositor</p>
+        </div>
+        <div class="col-12 mb-4">
+          <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <!-- <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-behance"></i></a> -->
+          </div>
+        </div>
+        <div class="col-12">
+          <p class="copyright">&copy; 2024 Suvetha Balu. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#home" class="back-to-top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- GLIGHTBOX JS -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Initialize GLightbox
+      const lightbox = GLightbox({
+        touchNavigation: true,
+        loop: true,
+        autoplayVideos: true
+      });
+
+      // Navbar scroll effect
+      const navbar = document.querySelector('.navbar');
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+
+      // Smooth scroll for nav links + collapse mobile menu
+      const navbarCollapse = document.getElementById('navbarNav');
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+
+          // Update active nav link
+          document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('active');
+          });
+          this.classList.add('active');
+
+          // Collapse mobile menu if open
+          if (navbarCollapse.classList.contains('show')) {
+            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse, { toggle: false });
+            bsCollapse.hide();
+          }
+        });
+      });
+    });
+
+
+const text = "Compositing Artist";  // Only the part you want to highlight
+const highlightElement = document.getElementById('highlight');
+let index = 0;
+let deleting = false;
+
+function typewriterLoop() {
+  if (!deleting) {
+    if (index < text.length) {
+      highlightElement.textContent += text.charAt(index);
+      index++;
+      setTimeout(typewriterLoop, 100);
+    } else {
+      setTimeout(() => {
+        deleting = true;
+        typewriterLoop();
+      }, 2000);
+    }
+  } else {
+    if (index > 0) {
+      highlightElement.textContent = text.substring(0, index - 1);
+      index--;
+      setTimeout(typewriterLoop, 50);
+    } else {
+      deleting = false;
+      setTimeout(typewriterLoop, 1000);
+    }
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  highlightElement.textContent = '';
+  typewriterLoop();
+});
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      typewriterElement.textContent = '';
+      typewriterLoop();
+    });
+
+
+
+    // Scroll reveal animation
+    const observerOptions = {
+      threshold: 0.2,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all scroll-reveal elements
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Animate skill bars when in view
+    const skillObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const progressBar = entry.target.querySelector('.skill-progress');
+          if (progressBar) {
+            const targetWidth = progressBar.getAttribute('data-progress');
+            progressBar.style.width = targetWidth + '%';
+          }
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.skill-card').forEach(card => {
+      skillObserver.observe(card);
+    });
+
+    // Animate numbers/stats
+    function animateValue(element, start, end, duration) {
+      let startTimestamp = null;
+      const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const value = Math.floor(progress * (end - start) + start);
+        element.innerHTML = value + (end === 100 ? '%' : '+');
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+        }
+      };
+      window.requestAnimationFrame(step);
+    }
+
+    // Observe stat numbers
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const target = parseInt(entry.target.getAttribute('data-target'));
+          animateValue(entry.target, 0, target, 2000);
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.stat-number').forEach(stat => {
+      statsObserver.observe(stat);
+    });
+
+    // Back to top button
+    const backToTop = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop.classList.add('show');
+      } else {
+        backToTop.classList.remove('show');
+      }
+    });
+
+    // Contact form submission
+    document.querySelector('.contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Thank you for your message! I will get back to you soon.');
+      this.reset();
+    });
+  </script>
+
+</body>
+
+</html>
