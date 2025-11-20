@@ -292,7 +292,7 @@ html {
     }
 }
 
-#typewriter {
+/* #typewriter {
   border-right: 2px solid white;
   white-space: nowrap;
   overflow: hidden;
@@ -308,7 +308,7 @@ html {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
-}
+} */
 /* blinking cursor */
 @keyframes blink-caret {
   from, to { border-color: transparent; }
@@ -1472,4 +1472,5 @@ html {
         padding: 1rem 2rem;
         font-size: 0.9rem;
     }
+
 }
