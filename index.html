@@ -151,7 +151,7 @@
     /* ============================================
        INTRO SECTION - Stunning Hero
     ============================================ */
-    .intro-section {
+       .intro-section {
       background: var(--gradient);
       padding: 180px 0 120px;
       position: relative;
@@ -189,16 +189,12 @@
     }
 
     @keyframes float-bubble {
-
-      0%,
-      100% {
+      0%, 100% {
         transform: translate(0, 0) scale(1);
       }
-
       33% {
         transform: translate(50px, -80px) scale(1.1);
       }
-
       66% {
         transform: translate(-30px, 50px) scale(0.9);
       }
@@ -227,7 +223,6 @@
         opacity: 0;
         transform: translateY(50px);
       }
-
       to {
         opacity: 1;
         transform: translateY(0);
@@ -254,7 +249,6 @@
         opacity: 0;
         transform: translateX(-100px);
       }
-
       to {
         opacity: 1;
         transform: translateX(0);
@@ -277,11 +271,15 @@
       background: white;
       color: var(--primary) !important;
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      border: none;
+      transition: all 0.3s ease;
     }
 
     .intro-section .btn-rounded:hover {
       background: var(--gradient-2);
       color: white !important;
+      transform: translateY(-3px);
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
     }
 
     @keyframes bounceIn {
@@ -289,21 +287,20 @@
         opacity: 0;
         transform: scale(0.5);
       }
-
       50% {
         transform: scale(1.1);
       }
-
       100% {
         opacity: 1;
         transform: scale(1);
       }
     }
 
-    /* Video Box with Play Button */
-    .video-box {
+    /* VFX Image Box */
+    .vfx-image-box {
       position: relative;
       animation: scaleIn 1s ease 0.6s backwards;
+      perspective: 1000px;
     }
 
     @keyframes scaleIn {
@@ -311,109 +308,170 @@
         opacity: 0;
         transform: scale(0.8) rotateY(-30deg);
       }
-
       to {
         opacity: 1;
         transform: scale(1) rotateY(0);
       }
     }
 
-    .video-box img {
+    .vfx-image-box img {
       border-radius: 30px;
       box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
       animation: levitate 4s ease-in-out infinite;
       transition: all 0.4s ease;
+      position: relative;
+      z-index: 2;
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
     }
 
     @keyframes levitate {
-
-      0%,
-      100% {
+      0%, 100% {
         transform: translateY(0) rotate(0deg);
       }
-
       50% {
         transform: translateY(-25px) rotate(2deg);
       }
     }
 
-    .video-box:hover img {
+    .vfx-image-box:hover img {
       transform: scale(1.05);
       box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+      filter: brightness(1.1);
     }
 
-    .glightbox {
-      width: 90px;
-      height: 90px;
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-      animation: pulse-play 2s ease-in-out infinite;
+    /* Glitch Effect Layers */
+    .glitch-wrapper {
+      position: relative;
+      display: inline-block;
     }
 
-    @keyframes pulse-play {
-
-      0%,
-      100% {
-        transform: translate(-50%, -50%) scale(1);
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
-      }
-
-      50% {
-        transform: translate(-50%, -50%) scale(1.1);
-        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
-      }
-    }
-
-    .glightbox:hover {
-      background: var(--accent);
-      transform: translate(-50%, -50%) scale(1.15) !important;
-    }
-
-    .glightbox i {
-      font-size: 2rem;
-      color: var(--primary);
-      transition: all 0.3s ease;
-    }
-
-    .glightbox:hover i {
-      color: white;
-    }
-
-    .border-animation {
+    .glitch-wrapper::before,
+    .glitch-wrapper::after {
+      content: '';
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      border: 2px solid rgba(255, 255, 255, 0.5);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: inherit;
+      border-radius: 30px;
+      opacity: 0;
       pointer-events: none;
     }
 
-    .border-animation--border-1 {
-      width: 120px;
-      height: 120px;
-      animation: ripple 2s ease-in-out infinite;
+    .vfx-image-box:hover .glitch-wrapper::before {
+      animation: glitch-1 0.3s ease-in-out;
+      opacity: 0.8;
+      z-index: 1;
     }
 
-    .border-animation--border-2 {
-      width: 150px;
-      height: 150px;
-      animation: ripple 2s ease-in-out 0.5s infinite;
+    .vfx-image-box:hover .glitch-wrapper::after {
+      animation: glitch-2 0.3s ease-in-out;
+      opacity: 0.8;
+      z-index: 1;
     }
 
-    @keyframes ripple {
-      0% {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(0.8);
-      }
-
-      100% {
+    @keyframes glitch-1 {
+      0%, 100% {
+        transform: translate(0);
         opacity: 0;
-        transform: translate(-50%, -50%) scale(1.5);
+      }
+      33% {
+        transform: translate(-5px, 5px);
+        opacity: 0.8;
+      }
+      66% {
+        transform: translate(5px, -5px);
+        opacity: 0.5;
+      }
+    }
+
+    @keyframes glitch-2 {
+      0%, 100% {
+        transform: translate(0);
+        opacity: 0;
+      }
+      33% {
+        transform: translate(5px, -5px);
+        opacity: 0.8;
+      }
+      66% {
+        transform: translate(-5px, 5px);
+        opacity: 0.5;
+      }
+    }
+
+    /* Particle Effect */
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    .particle:nth-child(1) {
+      top: 20%;
+      left: 10%;
+      animation: particle-float 3s ease-in-out infinite;
+    }
+
+    .particle:nth-child(2) {
+      top: 60%;
+      left: 80%;
+      animation: particle-float 4s ease-in-out infinite 0.5s;
+    }
+
+    .particle:nth-child(3) {
+      top: 40%;
+      left: 90%;
+      animation: particle-float 3.5s ease-in-out infinite 1s;
+    }
+
+    .particle:nth-child(4) {
+      top: 80%;
+      left: 20%;
+      animation: particle-float 4.5s ease-in-out infinite 1.5s;
+    }
+
+    @keyframes particle-float {
+      0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0;
+      }
+      50% {
+        transform: translate(20px, -30px) scale(1.5);
+        opacity: 1;
+      }
+    }
+
+    /* Neon Border Effect */
+    .neon-border {
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      border-radius: 35px;
+      /* background: linear-gradient(45deg, #ff00ff75, #00ffff91, #dfd9df7a); */
+      opacity: 0;
+      z-index: 1;
+      animation: neon-pulse 3s ease-in-out infinite;
+      filter: blur(15px);
+    }
+
+    @keyframes neon-pulse {
+      0%, 100% {
+        opacity: 0.3;
+      }
+      50% {
+        opacity: 0.7;
       }
     }
 
@@ -427,21 +485,53 @@
     }
 
     @keyframes wave-move {
-
-      0%,
-      100% {
+      0%, 100% {
         transform: translateX(0);
       }
-
       50% {
         transform: translateX(-20px);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .display-2--intro {
+        font-size: 2rem;
+      }
+      .display-2--description {
+        font-size: 1.5rem;
+      }
+      .intro-section {
+        padding: 120px 0 80px;
+      }
+      .vfx-image-box img {
+        max-width: 350px;
+      }
+      .vfx-image-box {
+        margin-top: 3rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .vfx-image-box img {
+        max-width: 280px;
+      }
+      .display-2--intro {
+        font-size: 1.6rem;
+      }
+      .display-2--description {
+        font-size: 1.2rem;
+      }
+      .btn-rounded {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
       }
     }
 
     /* ============================================
        ABOUT ME SECTION - Modern Design
     ============================================ */
- .campanies {
+    .campanies {
       padding: 80px 0;
       background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%);
       position: relative;
@@ -488,6 +578,7 @@
       from {
         width: 0;
       }
+
       to {
         width: 100px;
       }
@@ -520,9 +611,12 @@
     }
 
     @keyframes dot-bounce {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: translateY(-50%) scale(1);
       }
+
       50% {
         transform: translateY(-50%) scale(1.3);
       }
@@ -578,9 +672,11 @@
       0% {
         transform: rotate(0deg) scale(1);
       }
+
       50% {
         transform: rotate(180deg) scale(1.15);
       }
+
       100% {
         transform: rotate(360deg) scale(1);
       }
@@ -707,9 +803,12 @@
     }
 
     @keyframes float-circle {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: translate(0, 0);
       }
+
       50% {
         transform: translate(-50px, 50px);
       }
@@ -941,9 +1040,12 @@
     }
 
     @keyframes bounce-icon {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: translateX(8px) translateY(0);
       }
+
       50% {
         transform: translateX(8px) translateY(-5px);
       }
@@ -1683,19 +1785,19 @@
           </button>
         </div>
 
-        <!-- RIGHT SIDE - IMAGE & VIDEO -->
+        <!-- RIGHT SIDE - VFX IMAGE -->
         <div class="col-md-6 intros text-end">
-          <div class="video-box">
-            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&h=600&fit=crop"
-              alt="video illustration" class="img-fluid">
-            <a href=""
-              class="glightbox position-absolute top-50 start-50 translate-middle">
-              <span>
-                <i class="fas fa-play-circle"></i>
-              </span>
-              <span class="border-animation border-animation--border-1"></span>
-              <span class="border-animation border-animation--border-2"></span>
-            </a>
+          <div class="vfx-image-box">
+            <div class="neon-border"></div>
+            <div class="glitch-wrapper">
+              <img src="suvetha-2.png"
+                alt="compositing work illustration" class="img-fluid">
+            </div>
+            <!-- Floating Particles -->
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
           </div>
         </div>
       </div>
@@ -1709,10 +1811,11 @@
     </svg>
   </section>
 
+
   <!-- ============================================
        ABOUT ME SECTION
   ============================================ -->
-   <section id="campanies" class="campanies">
+  <section id="campanies" class="campanies">
     <div class="container">
       <div class="row text-center">
         <h4 class="display-3 fw-bold">About Me</h4>
@@ -1727,8 +1830,8 @@
         <!-- LEFT - PROFILE IMAGE -->
         <div class="col-md-4 text-center profile-container scroll-reveal">
           <div class="profile-wrapper">
-            <img src="suvetha-2.png"
-              alt="Suvetha Balu" class="profile-img" />
+              <img src="suvetha-2.png"
+             alt="Suvetha Balu" class="profile-img" />
           </div>
         </div>
 
@@ -2081,89 +2184,83 @@
   <!-- ============================================
        CONTACT SECTION
   ============================================ -->
- <section id="contact" class="contact-section">
-  <div class="container">
-    <div class="row text-center">
-      <h1 class="display-3 fw-bold">Get In Touch</h1>
-      <div class="heading-line"></div>
-      <p class="lead mb-5">Let's work together on your next VFX project</p>
-    </div>
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="row text-center">
+        <h1 class="display-3 fw-bold">Get In Touch</h1>
+        <div class="heading-line"></div>
+        <p class="lead mb-5">Let's work together on your next VFX project</p>
+      </div>
 
-    <!-- Contact Info Cards -->
-    <div class="row">
-      <div class="col-lg-4 col-md-6 mb-4 scroll-reveal">
-        <div class="contact-card">
-          <div class="contact-icon">
-            <i class="fas fa-envelope"></i>
+      <div class="row">
+        <!-- Contact Info Cards -->
+        <div class="col-lg-4 col-md-6 mb-4 scroll-reveal">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h4>Email</h4>
+            <a href="mailto:suvethabalu.vfx@gmail.com">suvethabalu.vfx@gmail.com</a>
           </div>
-          <h4>Email</h4>
-          <a href="mailto:suvethabalu.vfx@gmail.com">suvethabalu.vfx@gmail.com</a>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 scroll-reveal">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <h4>Phone</h4>
+            <a href="tel:+916380294732">+91 6380294732</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 scroll-reveal">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h4>Location</h4>
+            <p>74, Cyloncolony, Thathiengarpet,<br>Trichy District,<br>Tamil Nadu-621 214</p>
+          </div>
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-6 mb-4 scroll-reveal">
-        <div class="contact-card">
-          <div class="contact-icon">
-            <i class="fas fa-phone-alt"></i>
-          </div>
-          <h4>Phone</h4>
-          <a href="tel:+916380294732">+91 6380294732</a>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 mb-4 scroll-reveal">
-        <div class="contact-card">
-          <div class="contact-icon">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <h4>Location</h4>
-          <p>74, Cyloncolony, Thathiengarpet,<br>Trichy District,<br>Tamil Nadu-621 214</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Contact Form -->
-    <div class="row mt-5">
-      <div class="col-lg-8 mx-auto scroll-reveal">
-        <div class="contact-form-wrapper">
-          <form class="contact-form" 
-                action="https://formsubmit.co/dhivagark2715@gmail.com" 
-                method="POST">
-
-            <!-- Disable Captcha -->
-            <input type="hidden" name="_captcha" value="false">
-            <!-- Redirect after submission -->
-            <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
-
-            <div class="row">
-              <div class="col-md-6 mb-4">
-                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+      <!-- Contact Form -->
+      <div class="row mt-5">
+        <div class="col-lg-8 mx-auto scroll-reveal">
+          <div class="contact-form-wrapper">
+            <form id="contact-form" class="contact-form">
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <input type="text" name="from_name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <input type="email" name="reply_to" class="form-control" placeholder="Your Email" required>
+                </div>
               </div>
-              <div class="col-md-6 mb-4">
-                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+
+              <div class="mb-4">
+                <input type="text" name="subject" class="form-control" placeholder="Subject" required>
               </div>
-            </div>
 
-            <div class="mb-4">
-              <input type="text" name="subject" class="form-control" placeholder="Subject" required>
-            </div>
+              <div class="mb-4">
+                <textarea name="message" class="form-control" rows="6" placeholder="Your Message" required></textarea>
+              </div>
 
-            <div class="mb-4">
-              <textarea name="message" class="form-control" rows="6" placeholder="Your Message" required></textarea>
-            </div>
+              <div class="text-center">
+                <button type="submit" class="btn-download">
+                  Send Message
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </form>
 
-            <div class="text-center">
-              <button type="submit" class="btn-download">
-                Send Message
-                <i class="fas fa-paper-plane"></i>
-              </button>
-            </div>
-          </form>
+
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- ============================================
        FOOTER SECTION
@@ -2178,7 +2275,7 @@
         <div class="col-12 mb-4">
           <div class="social-links">
             <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/suvetha1226"><i class="fab fa-github"></i></a>
             <!-- <a href="#"><i class="fab fa-youtube"></i></a>
             <a href="#"><i class="fab fa-behance"></i></a> -->
           </div>
@@ -2201,70 +2298,72 @@
   <!-- GLIGHTBOX JS -->
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
   <script>
-// =============================
-// GLightbox Initialization
-// =============================
-document.addEventListener('DOMContentLoaded', function () {
-  GLightbox({
-    touchNavigation: true,
-    loop: true,
-    autoplayVideos: true
-  });
-});
-
-
-// =============================
-// Navbar scroll effect (add shadow / bg)
-// =============================
-window.addEventListener('scroll', function () {
-  const navbar = document.querySelector('.navbar');
-  if (window.scrollY > 50) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-});
-
-
-// =============================
-// Smooth scroll + Active Link
-// =============================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+    // =============================
+    // GLightbox Initialization
+    // =============================
+    document.addEventListener('DOMContentLoaded', function () {
+      GLightbox({
+        touchNavigation: true,
+        loop: true,
+        autoplayVideos: true
       });
-
-      // Update active link
-      document.querySelectorAll('.nav-link').forEach(link =>
-        link.classList.remove('active')
-      );
-      this.classList.add('active');
-    }
-  });
-});
+    });
 
 
-// =============================
-// Auto-Close Navbar (Mobile)
-// =============================
-const navLinks = document.querySelectorAll('.nav-link');
-const navbarToggler = document.querySelector('.navbar-toggler');
-const navbarCollapse = document.querySelector('.navbar-collapse');
+    // =============================
+    // Navbar scroll effect (add shadow / bg)
+    // =============================
+    window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
 
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    if (navbarCollapse.classList.contains('show')) {
-      navbarToggler.click();   // closes the menu
-    }
-  });
-});
+
+    // =============================
+    // Smooth scroll + Active Link
+    // =============================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+
+          // Update active link
+          document.querySelectorAll('.nav-link').forEach(link =>
+            link.classList.remove('active')
+          );
+          this.classList.add('active');
+        }
+      });
+    });
+
+
+    // =============================
+    // Auto-Close Navbar (Mobile)
+    // =============================
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (navbarCollapse.classList.contains('show')) {
+          navbarToggler.click();   // closes the menu
+        }
+      });
+    });
 
 
 
@@ -2344,25 +2443,31 @@ navLinks.forEach(link => {
       }
     });
 
-    // Contact form submission
-    document.querySelector('.contact-form').addEventListener('submit', function (e) {
-      e.preventDefault();
-      alert('Thank you for your message! I will get back to you soon.');
-      this.reset();
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      // Initialize EmailJS
+      emailjs.init("KGBUX7peTbkNRIk2W");
+
+      const form = document.getElementById("contact-form");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // prevent page reload
+
+        emailjs.sendForm('service_t6b2rin', 'template_5b4usfe', this)
+          .then(() => {
+            alert("Message sent successfully! 🎉");
+            form.reset();
+          }, (error) => {
+            alert("Failed to send message 😢\n" + JSON.stringify(error));
+          });
+      });
+
     });
   </script>
 
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
