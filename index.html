@@ -2081,7 +2081,7 @@
   <!-- ============================================
        CONTACT SECTION
   ============================================ -->
-  <section id="contact" class="contact-section">
+   <section id="contact" class="contact-section">
     <div class="container">
       <div class="row text-center">
         <h1 class="display-3 fw-bold">Get In Touch</h1>
@@ -2126,21 +2126,27 @@
       <div class="row mt-5">
         <div class="col-lg-8 mx-auto scroll-reveal">
           <div class="contact-form-wrapper">
-            <form class="contact-form">
+            <form class="contact-form" action="https://formsubmit.co/suvethabalu.vfx@gmail.com" method="POST">
+
+              <input type="hidden" name="_captcha" value="false">
+
               <div class="row">
                 <div class="col-md-6 mb-4">
-                  <input type="text" class="form-control" placeholder="Your Name" required>
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                 </div>
                 <div class="col-md-6 mb-4">
-                  <input type="email" class="form-control" placeholder="Your Email" required>
+                  <input type="email" name="email" class="form-control" placeholder="Your Email" required>
                 </div>
               </div>
+
               <div class="mb-4">
-                <input type="text" class="form-control" placeholder="Subject" required>
+                <input type="text" name="subject" class="form-control" placeholder="Subject" required>
               </div>
+
               <div class="mb-4">
-                <textarea class="form-control" rows="6" placeholder="Your Message" required></textarea>
+                <textarea name="message" class="form-control" rows="6" placeholder="Your Message" required></textarea>
               </div>
+
               <div class="text-center">
                 <button type="submit" class="btn-download">
                   Send Message
@@ -2148,12 +2154,12 @@
                 </button>
               </div>
             </form>
+
           </div>
         </div>
       </div>
     </div>
   </section>
-
   <!-- ============================================
        FOOTER SECTION
   ============================================ -->
@@ -2344,6 +2350,7 @@ navLinks.forEach(link => {
 </body>
 
 </html>
+
 
 
 
